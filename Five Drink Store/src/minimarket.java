@@ -341,7 +341,7 @@ public class minimarket {
                                     System.out.println("''''''''''''''''''''''''''''''''''''''''''''");
                                     break;
 
-                                case 5: // poll Queue
+                                case 5: // poll Queue, push stack, treedelete key,
                                     System.out.println("\n''''''''''''''''''''''''''''''''''''''''''''");
                                     do {
                                         System.out.println("\n================");
@@ -357,18 +357,20 @@ public class minimarket {
                                         PilihanW3 = Input.next();
                                         switch (PilihanW3) {
                                             case "n":
-                                                if (gudang_nescafe.isEmpty() != true) {
+                                                if (nescafe.size() <= 24 && gudang_nescafe.isEmpty() != true) {
                                                     System.out.println("> Daftar kode dus Nescafe di gudang");
                                                     System.out.println(gudang_nescafe);
                                                     System.out.println(
-                                                            "Kode dus Nescafe yang diambil : " + gudang_nescafe.peek());
-                                                    tree.deleteKey(gudang_nescafe.poll());
+                                                            "Kode dus Nescafe yang akan diambil : "
+                                                                    + gudang_nescafe.peek());
+
                                                     for (int a = 1; a <= 24; a++) {
                                                         nescafe.push(10100 + a);
                                                     }
                                                     if (nescafe.size() <= 24) {
                                                         System.out.println("> Nescafe sudah restock di Store");
                                                         System.out.println("Code minuman Nescafe : " + nescafe);
+                                                        tree.deleteKey(gudang_nescafe.poll());
                                                     } else {
                                                         System.out.println("Maaf minuman di store penuh");
                                                     }
@@ -377,19 +379,19 @@ public class minimarket {
                                                 }
                                                 break;
                                             case "m":
-                                                if (gudang_milo.isEmpty() != true) {
+                                                if (milo.size() <= 24 && gudang_milo.isEmpty() != true) {
                                                     System.out.println("> Daftar kode dus Milo di gudang");
                                                     System.out.println(gudang_milo);
                                                     System.out
-                                                            .println("Kode dus Milo yang diambil : "
+                                                            .println("Kode dus Milo yang akan diambil : "
                                                                     + gudang_milo.peek());
-                                                    tree.deleteKey(gudang_milo.poll());
                                                     for (int b = 1; b <= 24; b++) {
                                                         milo.push(20200 + b);
                                                     }
                                                     if (milo.size() <= 24) {
                                                         System.out.println("> Milo sudah restock di Store");
                                                         System.out.println("Code Milo : " + milo);
+                                                        tree.deleteKey(gudang_milo.poll());
                                                     } else {
                                                         System.out.println("Maaf minuman di store penuh");
                                                     }
@@ -398,19 +400,19 @@ public class minimarket {
                                                 }
                                                 break;
                                             case "c":
-                                                if (gudang_cola.isEmpty() != true) {
+                                                if (cola.size() <= 24 && gudang_cola.isEmpty() != true) {
                                                     System.out.println("> Daftar kode dus Cocacola di gudang");
                                                     System.out.println(gudang_cola);
                                                     System.out.println(
-                                                            "Kode dus Cocacola yang diambil : "
+                                                            "Kode dus Cocacola yang akan diambil : "
                                                                     + gudang_cola.peek());
-                                                    tree.deleteKey(gudang_cola.poll());
                                                     for (int c = 1; c <= 24; c++) {
                                                         cola.push(30300 + c);
                                                     }
                                                     if (cola.size() <= 24) {
                                                         System.out.println("> Cocacola sudah restock di Store");
                                                         System.out.println("Code Cocacola : " + cola);
+                                                        tree.deleteKey(gudang_cola.poll());
                                                     } else {
                                                         System.out.println("Maaf minuman di store penuh");
                                                     }
@@ -419,44 +421,45 @@ public class minimarket {
                                                 }
                                                 break;
                                             case "f":
-                                                if (gudang_fanta.isEmpty() != true) {
+                                                if (fanta.size() <= 24 && gudang_fanta.isEmpty() != true) {
                                                     System.out.println("> Daftar kode dus Fanta di gudang");
                                                     System.out.println(gudang_fanta);
                                                     System.out.println(
-                                                            "Kode dus Fanta yang diambil : " + gudang_fanta.peek());
-                                                    tree.deleteKey(gudang_fanta.poll());
-                                                    for (int d = 1; d <= 24; d++) {
-                                                        sprite.push(50500 + d);
-                                                        if (fanta.size() <= 24) {
-                                                            System.out.println("> Fanta sudah restock di Store");
-                                                            System.out.println("Code Fanta : " + fanta);
-                                                        } else {
-                                                            System.out.println("Maaf minuman di store penuh");
-                                                        }
+                                                            "Kode dus Fanta yang akan diambil : "
+                                                                    + gudang_fanta.peek());
+                                                    for (int c = 1; c <= 24; c++) {
+                                                        fanta.push(30300 + c);
+                                                    }
+                                                    if (fanta.size() <= 24) {
+                                                        System.out.println("> Fanta sudah restock di Store");
+                                                        System.out.println("Code Fanta : " + fanta);
+                                                        tree.deleteKey(gudang_fanta.poll());
+                                                    } else {
+                                                        System.out.println("Maaf minuman di store penuh");
                                                     }
                                                 } else {
                                                     System.out.println("Maaf Tidak ada stok Fanta di gudang");
                                                 }
                                                 break;
                                             case "s":
-                                                if (gudang_sprite.isEmpty() != true) {
+                                                if (sprite.size() <= 24 && gudang_sprite.isEmpty() != true) {
                                                     System.out.println("> Daftar kode dus Sprite di gudang");
                                                     System.out.println(gudang_sprite);
                                                     System.out.println(
-                                                            "Kode dus Sprite yang diambil : "
+                                                            "Kode dus Sprite yang akan diambil : "
                                                                     + gudang_sprite.peek());
-                                                    tree.deleteKey(gudang_sprite.poll());
-                                                    for (int e = 1; e <= 24; e++) {
-                                                        sprite.push(50500 + e);
+                                                    for (int c = 1; c <= 24; c++) {
+                                                        sprite.push(30300 + c);
                                                     }
                                                     if (sprite.size() <= 24) {
                                                         System.out.println("> Sprite sudah restock di Store");
-                                                        System.out.println("Code Sprite  : " + sprite);
+                                                        System.out.println("Code Sprite : " + sprite);
+                                                        tree.deleteKey(gudang_sprite.poll());
                                                     } else {
                                                         System.out.println("Maaf minuman di store penuh");
                                                     }
                                                 } else {
-                                                    System.out.println("Maaf Stok Sprite di gudang kosong");
+                                                    System.out.println("Maaf Tidak ada stok Sprite di gudang");
                                                 }
                                                 break;
                                         }
