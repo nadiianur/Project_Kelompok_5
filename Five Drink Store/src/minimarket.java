@@ -630,7 +630,7 @@ public class minimarket {
                                     System.out.println("|Sprite   : " + sprite.size());
                                     System.out.println("|Code     : " + sprite);
                                     System.out.println("======================================================");
-
+                                break;
                                 default:
                                     System.out.println("Pilihan tidak ditemukan");
                                     break;
