@@ -518,7 +518,7 @@ public class minimarket {
                             System.out.println("\n================================================");
                             System.out.println("         Menu Customer Five Drink Store        ");
                             System.out.println("================================================");
-                            System.out.println("1. Pesan Minuman di Minimarket"); // Pemesanan
+                            System.out.println("1. Pesan Minuman"); // Pemesanan
                             System.out.println("2. Cek Daftar Minuman di Kulkas (Store)"); // Menamilkan Stack
                             System.out.println("=------------------=");
                             System.out.println("Masukann pilihan : ");
